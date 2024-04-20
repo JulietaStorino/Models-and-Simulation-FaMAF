@@ -1,5 +1,6 @@
-# Exercise 1 - Practical Exercises 3: Random numbers and Monte Carlo method
+# Exercise 1c - Practice Exercises 3: Random numbers and Monte Carlo method
 from random import randrange
+from Chapter4 import *
 
 def find_period_linear_generator(a,c,M):
     ''' 
@@ -9,9 +10,9 @@ def find_period_linear_generator(a,c,M):
     '''
     seed = randrange(M) #y_0
     period = 1
-    y = (a * seed + c) % M #y_1
+    y = randMulti(a,M,seed) if c == 0 else randMixto(a,c,M,seed) #y_1
     while not y == seed:
-        y = (a * y + c) % M
+        y = randMulti(a,M,y) if c == 0 else randMixto(a,c,M,y)
         period += 1
     return (seed, period)
 

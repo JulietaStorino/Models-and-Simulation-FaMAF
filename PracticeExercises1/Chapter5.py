@@ -1,31 +1,31 @@
 from random import random
 
-# Funcion de Monte Carlo para estimar la integral de g en (0,1)
+# Monte Carlo function to estimate the integral of g at (0,1)
 def g(u):
-    # Funcion a integrar en (0,1)
+    # Function to integrate into (0,1)
     return (1 - u ** 2) ** (1.5)
 
 
 def MonteCarlo(g, Nsim):
-    # Estimacion de la integral de g con Nsim simulaciones
+    # Estimation of the integral of g with Nsim simulations
     Integral = 0
     for _ in range(Nsim):
         Integral += g(random())
     return Integral/Nsim
 
-# Funcion de Monte Carlo para estimar la integral de g en (a,b)
+# Monte Carlo function to estimate the integral of g in (a,b)
 def funciong(x):
-    # Funcion a integrar
+    # Function to integrate
     return exp(x ** 2 + x)
 
 def IntegralMonteCarlo(funciong, a, b, Nsim):
-    # Estima la integral de funciong entre a y b con Nsim simulaciones
+    # Estimate the integral of function between a and b with Nsim simulations
     Integral = 0
     for _ in range(Nsim):
         Integral += g(a + (b-a) * random())
     return Integral * (b-a)/Nsim
 
-# Estimación del valor de pi con Monte Carlo
+# Estimating the value of pi with Monte Carlo
 def valorPi(Nsim):
     enCirculo = 0.
     for _ in range(Nsim):

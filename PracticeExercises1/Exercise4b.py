@@ -1,5 +1,5 @@
 # Exercise 4b - Practice Exercises 3: Random numbers and Monte Carlo method
-from random import random, expovariate
+from random import random
 from Exercise4a import simulation
 
 if __name__ == "__main__":

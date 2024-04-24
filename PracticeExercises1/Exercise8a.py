@@ -1,3 +1,4 @@
+# Exercise 8a - Practical Exercises 3: Random numbers and Monte Carlo method
 from random import random
 from math import exp
 

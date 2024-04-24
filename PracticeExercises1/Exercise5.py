@@ -1,6 +1,6 @@
+# Exercise 5 a..f - Practical Exercises 3: Random numbers and Monte Carlo method
 from random import random
 import numpy as np
-import math
 import Chapter5 as ch
 
 def a(x):
@@ -50,10 +50,10 @@ if __name__ == "__main__":
     #5e
     print(f'\te:')
     for iteration in iterations:
-        Estimation = MultipleMonteCarlo_0_1(e, iteration)
+        Estimation = ch.MultipleMonteCarlo_0_1(e, iteration)
         print(f'\t\t {iteration} iterations: {Estimation}')
     #5f
     print(f'\tf:')
     for iteration in iterations:
-        Estimation = MultipleMonteCarlo_0_inf(f, iteration)
+        Estimation = ch.MultipleMonteCarlo_0_inf(f, iteration)
         print(f'\t\t {iteration} iterations: {Estimation}')

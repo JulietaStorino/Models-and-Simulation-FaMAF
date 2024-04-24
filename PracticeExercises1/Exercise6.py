@@ -1,3 +1,4 @@
+# Exercise 6 - Practical Exercises 3: Random numbers and Monte Carlo method
 from random import random, choice
 from math import sqrt, pi
 
@@ -16,4 +17,4 @@ if __name__ == "__main__":
     for iteration in iterations:
         estimation = CalculatePi(iteration)
         print(f'Iterations: {iteration}.')
-        print(f'Estimation obtained: {estimation}.')
+        print(f'Estimation obtained: {estimation}.\n')

@@ -1,37 +1,39 @@
 from random import random
 
-# Monte Carlo function to estimate the integral of g at (0,1)
-def g(u):
-    # Function to integrate into (0,1)
-    return (1 - u ** 2) ** (1.5)
-
-
-def MonteCarlo(g, Nsim):
-    # Estimation of the integral of g with Nsim simulations
+# Estimation of the integral of g in the interval (0,1) with Nsim simulations
+def MonteCarlo_0_1(g, Nsim):
     Integral = 0
     for _ in range(Nsim):
         Integral += g(random())
     return Integral/Nsim
 
-# Monte Carlo function to estimate the integral of g in (a,b)
-def funciong(x):
-    # Function to integrate
-    return exp(x ** 2 + x)
-
-def IntegralMonteCarlo(funciong, a, b, Nsim):
-    # Estimate the integral of function between a and b with Nsim simulations
+# Estimation of the integral of g in the interval (a,b) with Nsim simulations
+def MonteCarlo_a_b(g, a, b, Nsim):
     Integral = 0
     for _ in range(Nsim):
         Integral += g(a + (b-a) * random())
-    return Integral * (b-a)/Nsim
+    return Integral*(b-a) / Nsim
 
-# Estimating the value of pi with Monte Carlo
-def valorPi(Nsim):
-    enCirculo = 0.
+# Estimation of the integral of g in the interval (0,inf) with Nsim simulations
+def MonteCarlo_0_inf(g, Nsim):
+    Integral = 0
     for _ in range(Nsim):
-        u = 2 * random() -1
-        v = 2 * random() - 1
-        if u ** 2 + v ** 2 <= 1:
-            enCirculo += 1
-    return 4 * enCirculo/Nsim
-    
+        u = random()
+        Integral += g(1/u-1) / (u**2)
+    return Integral/Nsim
+
+# Estimation of the multiple integral of g in the interval (0,1)^2 with Nsim simulations
+def MultipleMonteCarlo_0_1(g, Nsim):
+    Integral = 0
+    for _ in range(Nsim):
+        Integral += g(random(),random())
+    return Integral/Nsim
+
+# Estimation of the multiple integral of g in the interval (0,inf)x^2 with Nsim simulations
+def MultipleMonteCarlo_0_inf(g, Nsim):
+    Integral = 0
+    for _ in range(Nsim):
+        u1=random()
+        u2=random()
+        Integral+= g(1/u1-1, 1/u2-1) / ((u1**2)*(u2**2))
+    return Integral/Nsim

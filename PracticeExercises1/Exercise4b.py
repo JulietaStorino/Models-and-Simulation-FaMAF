@@ -17,7 +17,7 @@ if __name__ == "__main__":
     box2 /= 1000
     box3 /= 1000
     print('Probability that a customer has chosen')
-    print(f'    Box 1: {box1}')
-    print(f'    Box 2: {box2}')
-    print(f'    Box 3: {box3}')
+    print(f'\tBox 1: {box1}')
+    print(f'\tBox 2: {box2}')
+    print(f'\tBox 3: {box3}')
     

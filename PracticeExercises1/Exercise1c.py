@@ -26,9 +26,9 @@ if __name__ == "__main__":
         data = find_period_linear_generator(a,c,M)
         seed,period = data
         print(f'Case: a = {a}, c = {c}, M = {M}.')
-        print(f'    Seed: {seed}, period: {period}.')
+        print(f'\tSeed: {seed}, period: {period}.')
         if is_maximum_period(c,M,period):
-            print('    Got the maximum period.')
+            print('\tGot the maximum period.')
         else:
-            print('    Did not get maximum period.')
+            print('\tDid not get maximum period.')
         print()

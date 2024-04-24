@@ -1,7 +1,7 @@
+#Resolution of the first partial of 2023
 import math
 import numpy as np
 from random import random
-#from random import expovariate
 
 def ejercicio2():
     U = random() 

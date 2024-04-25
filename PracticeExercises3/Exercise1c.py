@@ -1,6 +1,6 @@
 # Exercise 1c - Practice Exercises 3: Random numbers and Monte Carlo method
 from random import randrange
-from Chapter4 import *
+from Chapter3 import *
 
 def find_period_linear_generator(a,c,M):
     ''' 

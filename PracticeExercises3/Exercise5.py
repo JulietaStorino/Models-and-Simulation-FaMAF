@@ -1,7 +1,7 @@
 # Exercise 5 a..f - Practical Exercises 3: Random numbers and Monte Carlo method
 from random import random
 import numpy as np
-import Chapter5 as ch
+import Chapter4 as ch
 
 def a(x):
     return (1 - x**2) ** (3/2) 

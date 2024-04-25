@@ -1,5 +1,5 @@
 # Exercise 1a - Practical Exercises 3: Random numbers and Monte Carlo method
-from Chapter4 import *
+from Chapter3 import *
 
 if __name__ == "__main__":
     print("First ten numbers of the von Neumann sequence plus the seed:")
